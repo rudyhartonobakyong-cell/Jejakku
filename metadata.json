@@ -1,0 +1,6 @@
+{
+  "name": "JejakKu",
+  "description": "Aplikasi catatan kunjungan harian dan album foto kenangan dengan 6 pilihan tema kustom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

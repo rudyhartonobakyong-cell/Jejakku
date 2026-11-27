@@ -1,0 +1,215 @@
+package com.example.ui.theme
+
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.ui.graphics.Color
+
+enum class AppThemeId(val storageKey: String) {
+  SAMUDRA("samudra"),
+  PINK_MANIS("pink_manis"),
+  HITAM_ELEGAN("hitam_elegan"),
+  HIJAU_HUTAN("hijau_hutan"),
+  UNGU_SENJA("ungu_senja"),
+  ORANYE_PANTAI("oranye_pantai");
+
+  companion object {
+    fun fromKey(key: String?): AppThemeId =
+      entries.firstOrNull { it.storageKey == key } ?: SAMUDRA
+  }
+}
+
+data class AppThemeSpec(
+  val id: AppThemeId,
+  val displayName: String,
+  val isDark: Boolean,
+  val background: Color,
+  val accent: Color,
+  val surface: Color,
+  val surfaceVariant: Color,
+  val surfaceContainer: Color,
+  val onBackground: Color,
+  val onSurfaceVariant: Color,
+  val onPrimary: Color,
+  val primaryContainer: Color,
+  val onPrimaryContainer: Color,
+  val outline: Color,
+  val error: Color,
+  val onError: Color,
+) {
+  fun toColorScheme(): ColorScheme =
+    if (isDark) {
+      darkColorScheme(
+        primary = accent,
+        onPrimary = onPrimary,
+        primaryContainer = primaryContainer,
+        onPrimaryContainer = onPrimaryContainer,
+        secondary = accent.copy(alpha = 0.85f),
+        onSecondary = onPrimary,
+        secondaryContainer = surfaceVariant,
+        onSecondaryContainer = onBackground,
+        tertiary = accent,
+        onTertiary = onPrimary,
+        background = background,
+        onBackground = onBackground,
+        surface = surface,
+        onSurface = onBackground,
+        surfaceVariant = surfaceVariant,
+        onSurfaceVariant = onSurfaceVariant,
+        surfaceContainerLowest = background,
+        surfaceContainerLow = surface,
+        surfaceContainer = surfaceContainer,
+        surfaceContainerHigh = surfaceVariant,
+        surfaceContainerHighest = surfaceVariant,
+        outline = outline,
+        outlineVariant = outline.copy(alpha = 0.6f),
+        error = error,
+        onError = onError,
+      )
+    } else {
+      lightColorScheme(
+        primary = accent,
+        onPrimary = onPrimary,
+        primaryContainer = primaryContainer,
+        onPrimaryContainer = onPrimaryContainer,
+        secondary = accent.copy(alpha = 0.85f),
+        onSecondary = onPrimary,
+        secondaryContainer = surfaceVariant,
+        onSecondaryContainer = onBackground,
+        tertiary = accent,
+        onTertiary = onPrimary,
+        background = background,
+        onBackground = onBackground,
+        surface = surface,
+        onSurface = onBackground,
+        surfaceVariant = surfaceVariant,
+        onSurfaceVariant = onSurfaceVariant,
+        surfaceContainerLowest = surface,
+        surfaceContainerLow = surface,
+        surfaceContainer = surfaceContainer,
+        surfaceContainerHigh = surfaceVariant,
+        surfaceContainerHighest = surfaceVariant,
+        outline = outline,
+        outlineVariant = outline.copy(alpha = 0.6f),
+        error = error,
+        onError = onError,
+      )
+    }
+}
+
+object AppThemes {
+  val all: List<AppThemeSpec> =
+    listOf(
+      AppThemeSpec(
+        id = AppThemeId.SAMUDRA,
+        displayName = "Samudra",
+        isDark = true,
+        background = Color(0xFF0A1018),
+        accent = Color(0xFF4FC3F7),
+        surface = Color(0xFF111A26),
+        surfaceVariant = Color(0xFF192638),
+        surfaceContainer = Color(0xFF141F2E),
+        onBackground = Color(0xFFEAF3FA),
+        onSurfaceVariant = Color(0xFF93AAC2),
+        onPrimary = Color(0xFF042233),
+        primaryContainer = Color(0xFF113850),
+        onPrimaryContainer = Color(0xFFBBE9FF),
+        outline = Color(0xFF273B52),
+        error = Color(0xFFFF6B6B),
+        onError = Color(0xFF3A0000),
+      ),
+      AppThemeSpec(
+        id = AppThemeId.PINK_MANIS,
+        displayName = "Pink Manis",
+        isDark = false,
+        background = Color(0xFFFFF0F5),
+        accent = Color(0xFFEC4899),
+        surface = Color(0xFFFFFFFF),
+        surfaceVariant = Color(0xFFFCE0EE),
+        surfaceContainer = Color(0xFFFFE5F0),
+        onBackground = Color(0xFF2B1120),
+        onSurfaceVariant = Color(0xFF7D4B66),
+        onPrimary = Color(0xFFFFFFFF),
+        primaryContainer = Color(0xFFFBD0E4),
+        onPrimaryContainer = Color(0xFF5E0B38),
+        outline = Color(0xFFF3BDD7),
+        error = Color(0xFFD92D20),
+        onError = Color(0xFFFFFFFF),
+      ),
+      AppThemeSpec(
+        id = AppThemeId.HITAM_ELEGAN,
+        displayName = "Hitam Elegan",
+        isDark = true,
+        background = Color(0xFF000000),
+        accent = Color(0xFFD4AF37),
+        surface = Color(0xFF101010),
+        surfaceVariant = Color(0xFF1C1912),
+        surfaceContainer = Color(0xFF14130E),
+        onBackground = Color(0xFFF6F2E9),
+        onSurfaceVariant = Color(0xFFB0A690),
+        onPrimary = Color(0xFF1E1702),
+        primaryContainer = Color(0xFF3A2F0D),
+        onPrimaryContainer = Color(0xFFFBE59A),
+        outline = Color(0xFF332D1E),
+        error = Color(0xFFFF6B6B),
+        onError = Color(0xFF3A0000),
+      ),
+      AppThemeSpec(
+        id = AppThemeId.HIJAU_HUTAN,
+        displayName = "Hijau Hutan",
+        isDark = true,
+        background = Color(0xFF0F1F17),
+        accent = Color(0xFF4ADE80),
+        surface = Color(0xFF152A20),
+        surfaceVariant = Color(0xFF1E3A2C),
+        surfaceContainer = Color(0xFF183125),
+        onBackground = Color(0xFFECF8F0),
+        onSurfaceVariant = Color(0xFF94BBA3),
+        onPrimary = Color(0xFF052913),
+        primaryContainer = Color(0xFF144729),
+        onPrimaryContainer = Color(0xFFBDF8D1),
+        outline = Color(0xFF2A4D3A),
+        error = Color(0xFFFF6B6B),
+        onError = Color(0xFF3A0000),
+      ),
+      AppThemeSpec(
+        id = AppThemeId.UNGU_SENJA,
+        displayName = "Ungu Senja",
+        isDark = true,
+        background = Color(0xFF1A1033),
+        accent = Color(0xFFA78BFA),
+        surface = Color(0xFF231744),
+        surfaceVariant = Color(0xFF2F2059),
+        surfaceContainer = Color(0xFF281B4E),
+        onBackground = Color(0xFFF3EFFE),
+        onSurfaceVariant = Color(0xFFB2A0D8),
+        onPrimary = Color(0xFF1B0C40),
+        primaryContainer = Color(0xFF3D2775),
+        onPrimaryContainer = Color(0xFFE5DCFF),
+        outline = Color(0xFF443078),
+        error = Color(0xFFFF6B6B),
+        onError = Color(0xFF3A0000),
+      ),
+      AppThemeSpec(
+        id = AppThemeId.ORANYE_PANTAI,
+        displayName = "Oranye Pantai",
+        isDark = false,
+        background = Color(0xFFFFF7ED),
+        accent = Color(0xFFF97316),
+        surface = Color(0xFFFFFFFF),
+        surfaceVariant = Color(0xFFFFE8CC),
+        surfaceContainer = Color(0xFFFFF0DB),
+        onBackground = Color(0xFF2C1606),
+        onSurfaceVariant = Color(0xFF8C5530),
+        onPrimary = Color(0xFFFFFFFF),
+        primaryContainer = Color(0xFFFFD8B0),
+        onPrimaryContainer = Color(0xFF5C2400),
+        outline = Color(0xFFFED0A1),
+        error = Color(0xFFD92D20),
+        onError = Color(0xFFFFFFFF),
+      ),
+    )
+
+  fun specFor(themeId: AppThemeId): AppThemeSpec =
+    all.firstOrNull { it.id == themeId } ?: all.first()
+}

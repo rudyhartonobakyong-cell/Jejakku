@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">JejakKu</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_today">Hari Ini</string>
+    <string name="nav_memories">Kenangan</string>
+    <string name="nav_account">Akun &amp; Pengaturan</string>
+
+    <!-- Today Visit Screen -->
+    <string name="today_title">Kunjungan Hari Ini</string>
+    <string name="today_location_label">Lokasi Kunjungan</string>
+    <string name="today_location_placeholder">Contoh: Pantai Parangtritis, Yogyakarta</string>
+    <string name="today_description_label">Deskripsi Perjalanan</string>
+    <string name="today_description_placeholder">Ceritakan momen seru atau catatan kunjungan hari ini...</string>
+    <string name="today_save_visit">Simpan Kunjungan</string>
+    <string name="today_take_photo">Ambil Foto</string>
+    <string name="today_camera_subtitle">Foto disimpan di aplikasi &amp; terhubung ke tanggal dan lokasi</string>
+    <string name="today_photos_section">Foto Hari Ini</string>
+    <string name="today_no_photos_yet">Belum ada foto hari ini. Ketuk tombol kamera untuk mengabadikan momen!</string>
+    <string name="today_saved_message">Catatan kunjungan hari ini tersimpan.</string>
+    <string name="today_photo_saved_message">Foto kenangan tersimpan!</string>
+    <string name="today_default_location">Kunjungan Hari Ini</string>
+
+    <!-- Memories Tab -->
+    <string name="memories_title">Kenangan</string>
+    <string name="memories_subtitle">Setiap tanggal dan cerita perjalananmu</string>
+    <string name="memories_empty_title">Belum Ada Kenangan</string>
+    <string name="memories_empty_message">Catat kunjungan atau ambil foto di tab Hari Ini, lalu semua kenanganmu akan tampil rapi di sini.</string>
+    <string name="memories_go_today">Catat Kunjungan Hari Ini</string>
+    <string name="memories_photo_count_format">%1$d foto</string>
+    <string name="memories_no_description">Belum ada deskripsi perjalanan.</string>
+
+    <!-- Date Detail Screen -->
+    <string name="detail_title">Detail Kenangan</string>
+    <string name="detail_back">Kembali</string>
+    <string name="detail_add_photo">Tambah Foto</string>
+    <string name="detail_description_title">Deskripsi Perjalanan</string>
+    <string name="detail_edit_visit">Edit Catatan</string>
+    <string name="detail_delete_photo">Hapus Foto</string>
+    <string name="detail_delete_confirm_title">Hapus Foto Kenangan?</string>
+    <string name="detail_delete_confirm_body">Foto ini akan dihapus permanen dari penyimpanan aplikasi.</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_delete">Hapus</string>
+    <string name="action_save">Simpan</string>
+
+    <!-- Account & Settings Tab -->
+    <string name="account_title">Akun &amp; Pengaturan</string>
+    <string name="account_edit_profile">Edit Profil</string>
+    <string name="account_name_label">Nama Tampilan</string>
+    <string name="account_bio_label">Bio Perjalanan</string>
+    <string name="account_stats_visits">Kunjungan</string>
+    <string name="account_stats_photos">Foto</string>
+    <string name="theme_section_title">Tema Aplikasi</string>
+    <string name="theme_section_subtitle">Pilih palet warna yang langsung diterapkan ke seluruh aplikasi</string>
+    <string name="theme_mode_dark">Gelap</string>
+    <string name="theme_mode_light">Terang</string>
+    <string name="storage_info_title">Penyimpanan Aplikasi</string>
+    <string name="storage_info_body">%1$d foto tersimpan aman secara lokal di perangkat ini.</string>
+
+    <!-- Camera & Permissions -->
+    <string name="camera_permission_denied">Izin kamera diperlukan untuk memotret foto kenangan.</string>
+    <string name="camera_capture_cancelled">Pengambilan foto dibatalkan.</string>
+    <string name="camera_unavailable">Kamera tidak tersedia di perangkat ini.</string>
+
+    <!-- Content Descriptions -->
+    <string name="cd_camera_button">Buka kamera untuk memotret</string>
+    <string name="cd_location_pin">Ikon pin lokasi</string>
+    <string name="cd_memory_cover">Foto sampul kenangan</string>
+    <string name="cd_memory_photo">Foto kenangan</string>
+    <string name="cd_theme_selected">Tema aktif</string>
+</resources>
